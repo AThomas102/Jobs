@@ -1,0 +1,17 @@
+To Whom It May Concern,
+
+I hope that by joining your team I am able to learn about the current state of the art for 5G technologies help you develop your capabilities in achieving highspeed and bandwidth algorithms for the future. 
+Through my year in industry at Compound Semiconductor Applications, and testing of high frequency GaN amplifiers, I have learnt how essential developing new 5G technologies, algorithms and patents are for our new wireless infrastructures.
+I have been working on the embedded software within the Lancaster Formula Student team. I have particurly enjoyed going in depth into the workings of the ARM Cortex-M3 core using the Nucleo-F3 Series boards and trying to take full advantage of the hardware capabilities.This has involved using the modules for SPI, CAN, UART and I2C and have written Tasks using the FreeRTOS scheduler to manage this. 
+I believe that my capabilities in Python and interests in real-world AI applications will help you create world-leading IP.
+
+Thanks you for taking the time to review my application,
+Andrew  
+
+Interview:
+
+Notes:
+
+Questions:
+?
+
