@@ -1,0 +1,1 @@
+Note in the technical example that my history lets me adapt quickly to new frameworks and my wide breadth of history in using a variety of data processing tools such as pytorch, numpy and matplot lib aswell as manual artifact interfaces using artifactory set me up well to learn a new quickly learn a new API.

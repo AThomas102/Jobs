@@ -1,0 +1,1 @@
+Chain of trust implementation of secure bootloader in embedded touchpad device. Compliant with NIST SP 800-193, required design and implementation of root of trust signing methodology using a FIPS 186-5 compliant DSA for secure firmware download and update.
