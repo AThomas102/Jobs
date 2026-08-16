@@ -1,19 +1,20 @@
 This repo is for generating applications and filling forms for job applications.
 The following directories describe all the required info about the applicant:
-CV files
-Applications (including previous applications for reference)
+CV files (historical originals — Word/PDF archive)
+Applications (including previous applications for reference; current role CVs are `cv.typ`)
 
 All future applications and forms should be filled using info available about 
 the candidate from this repo. 
-NEVER hallucinate or make up infomation about the candidate.
+NEVER hallucinate or make up information about the candidate.
 
 # How to create an application #
-A job application should have atleast the following files:
+A job application should have at least the following files:
 job_description.md
 forms.md
 
 And once completed it will also include:
 application.md
+cv.typ (role-tailored Typst CV; see CV (Typst) below)
 
 The forms.md shows the forms required to be filled in for the given application.
 Each form entry in forms.md must include two parts:
@@ -40,7 +41,26 @@ If the user provides a new experience/technical ability, ALWAYS maintain a verba
 
 NEVER EVER edit old completed applications. They are just for reference.
 
-If the user provides new instructions about how to improve the workflow, you may edit this agents.md file. Although only ever do this if you are sure this is an improvement.
+# Testing
+
+- Tests must assert **intended** behaviour, not “whatever the code currently does.”
+- If a test fails, **report the failure** and diagnose (bad data vs code bug vs wrong intended assertion) before changing production code.
+- **Never** silently loosen, rewrite, or delete assertions to match broken behaviour.
+- We should **never** match broken behaviour.
+
+If the user provides new instructions about how to improve the workflow, you may edit this AGENTS.md file. Although only ever do this if you are sure this is an improvement.
+# Documentation #
+All scripts, templates, and reusable helpers MUST use clean, concise Google-style docstrings (or the closest equivalent for that language).
+
+Required shape:
+- One-line summary first.
+- Optional short description only when the summary is not enough.
+- `Args:` / `Returns:` / `Raises:` (or language-equivalent) when there are parameters, outputs, or failure modes.
+- Types live in annotations (or language-equivalent signatures) — do not restate them in the docstring.
+- No narrative fluff, restated signatures, or obvious commentary.
+
+This applies to Typst helpers (`Templates/`), shell scripts (`scripts/`), and any future Python or other code in this repo.
+
 # Style
 
 Always use British English spelling of words, if american English is used always correct to British English in the current application submission forms.
@@ -60,3 +80,9 @@ Always go over the provided forms once again after completing your task. This is
 
 # Formatting #
 Ensure each point is always split up into sharp bullet point sections for things like employment history.
+
+# CV (Typst) #
+- Role CVs: `Applications/<role>/cv.typ` importing `Templates/cv/template.typ`
+- Build: `./scripts/build-cv.sh Applications/<role>/cv.typ` (uses system `typst`, e.g. from yay)
+- Upload the PDF; keep `forms.md` / `application.md` for paste-in fields
+- `Experiences/` stays verbatim notes only

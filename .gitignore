@@ -1,1 +1,4 @@
 .obsidian/
+
+# Typst build output (source of truth is Applications/<role>/cv.typ)
+Applications/**/*.pdf
