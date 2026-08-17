@@ -60,13 +60,6 @@ When preparing a new application or interview, read Interviews/ for gaps (topics
 
 Do not put interview notes under Applications/.
 
-# Testing
-
-- Tests must assert **intended** behaviour, not “whatever the code currently does.”
-- If a test fails, **report the failure** and diagnose (bad data vs code bug vs wrong intended assertion) before changing production code.
-- **Never** silently loosen, rewrite, or delete assertions to match broken behaviour.
-- We should **never** match broken behaviour.
-
 If the user provides new instructions about how to improve the workflow, you may edit this AGENTS.md file. Although only ever do this if you are sure this is an improvement.
 # Documentation #
 All scripts, templates, and reusable helpers MUST use clean, concise Google-style docstrings (or the closest equivalent for that language).
@@ -103,5 +96,3 @@ Ensure each point is always split up into sharp bullet point sections for things
 # CV (Typst) #
 - Role CVs: `Applications/<role>/cv.typ` importing `Templates/cv/template.typ`
 - Build: `./scripts/build-cv.sh Applications/<role>/cv.typ` (uses system `typst`, e.g. from yay)
-- Upload the PDF; keep `forms.md` / `application.md` for paste-in fields
-- `Experiences/` and `Interviews/` stay verbatim notes only
