@@ -1,7 +1,9 @@
-This repo is for generating applications and filling forms for job applications.
+This repo is for generating applications and filling forms for job applications, and for learning from past interviews (company feedback, self-reflection, and topics to work on).
 The following directories describe all the required info about the applicant:
 CV files (historical originals — Word/PDF archive)
 Applications (including previous applications for reference; current role CVs are `cv.typ`)
+Experiences (verbatim notes on skills and projects)
+Interviews (verbatim company feedback, self-reflection, and topics to work on)
 
 All future applications and forms should be filled using info available about 
 the candidate from this repo. 
@@ -37,9 +39,26 @@ given form, stop and notify the user.
 If there is only a little information about a form requirement, keep it brief, so it is obvious to the user that more information is needed there.
 
 # Improving #
-If the user provides a new experience/technical ability, ALWAYS maintain a verbatim copy of this in the directory Experiences/. This is so future agents refer back to this. Never put reworded information in the CV files or Experiences/ directories.
+If the user provides a new experience/technical ability, ALWAYS maintain a verbatim copy of this in the directory Experiences/. This is so future agents refer back to this. Never put reworded information in the CV files, Experiences/, or Interviews/ directories.
 
 NEVER EVER edit old completed applications. They are just for reference.
+
+# Interviews #
+This repo also stores interview feedback and reflection so later applications and interview prep can target weak topics.
+
+When the user gives company feedback or a recap of their own performance, create or update a file immediately:
+`Interviews/<Company> - <Role>/YYYY-MM-DD-<stage>.md`
+Start from `Templates/interview.md` if the file does not exist.
+
+Copy the user's words verbatim into the matching section (Company feedback, Self reflection, Topics to work on). Do not paraphrase, summarise, or “clean up” those fenced blocks. Headings and Meta labels may use British English; quoted user or company text must stay as given.
+
+If the user only implies topics inside the reflection, copy those phrases unchanged into Topics to work on. Do not invent a rewritten study list inside the interview file.
+
+If there is no matching application folder, still file the interview under Interviews/. Put the Applications/ path in Meta when one exists.
+
+When preparing a new application or interview, read Interviews/ for gaps (topics, weak stories, process mistakes) and use them to steer prep. Do not rewrite the source interview files while doing that.
+
+Do not put interview notes under Applications/.
 
 # Testing
 
@@ -85,4 +104,4 @@ Ensure each point is always split up into sharp bullet point sections for things
 - Role CVs: `Applications/<role>/cv.typ` importing `Templates/cv/template.typ`
 - Build: `./scripts/build-cv.sh Applications/<role>/cv.typ` (uses system `typst`, e.g. from yay)
 - Upload the PDF; keep `forms.md` / `application.md` for paste-in fields
-- `Experiences/` stays verbatim notes only
+- `Experiences/` and `Interviews/` stay verbatim notes only

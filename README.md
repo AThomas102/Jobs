@@ -1,8 +1,8 @@
 # Jobs
 
-Job applications, experiences, and role CVs.
+Job applications, experiences, role CVs, and interview learning.
 
-Workflow for agents is in [`AGENTS.md`](./AGENTS.md). Historical Word/PDF CVs stay under `CV files/`; new role CVs are Typst sources under `Applications/<role>/cv.typ`.
+Workflow for agents is in [`AGENTS.md`](./AGENTS.md). Historical Word/PDF CVs stay under `CV files/`; new role CVs are Typst sources under `Applications/<role>/cv.typ`. Company feedback and self-reflection go under [`Interviews/`](./Interviews/) (verbatim, from [`Templates/interview.md`](./Templates/interview.md)) so later prep can target weak topics.
 
 ## Typst CV
 
